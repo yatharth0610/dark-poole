@@ -1,5 +1,5 @@
 # Setup
-title: Dark Poole
+title: Yatharth Goswami
 url: https://yatharth0610.github.io/blog
 paginate: 1
 paginate_path: "/blog/page:num/"
@@ -33,9 +33,9 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Mark Otto
-  url: https://twitter.com/mdo
-  email: markdotto@gmail.com
+  name: Yatharth Goswami
+  url: https://yatharth0610.github.io
+  email: ygoswami@iitk.ac.in
 
 # Custom vars
 version: 3.0.0
@@ -43,7 +43,7 @@ version: 3.0.0
 # Navbar page list
 nav:
   - title: Blog
-    url: /dark-poole/archive
+    url: /blog/archive
 
   - title: About
-    url: /dark-poole/about
+    url: /blog/about
