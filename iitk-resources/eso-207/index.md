@@ -15,7 +15,7 @@ There were in total four assignments during the course whose solutions can be fo
 # Assignment Solutions
 
 ### [Assignment 1 - Theoretical](/blog/iitk-resources/eso-207/Solutions/Assignment1/Theoretical/Assignment_1.pdf) | [Assignment 1 - Code](/blog/iitk-resources/eso-207/Solutions/Assignment1/Programming/assign1.cpp)
-### [Assignment 2 - Theoretical](/blogiitk-resources/eso-207/Solutions/Assignment2/Theoretical/191178.pdf) | [Assignment 2 - Code(1)](/blog/iitk-resources/eso-207/Solutions/Assignment2/Programming/merge_stack.cpp) | [Assignment 2 - Code (2)](/blog/iitk-resources/eso-207/Solutions/Assignment2/Programming/stack.cpp) 
+### [Assignment 2 - Theoretical](/blog/iitk-resources/eso-207/Solutions/Assignment2/Theoretical/191178.pdf) | [Assignment 2 - Code(1)](/blog/iitk-resources/eso-207/Solutions/Assignment2/Programming/merge_stack.cpp) | [Assignment 2 - Code (2)](/blog/iitk-resources/eso-207/Solutions/Assignment2/Programming/stack.cpp) 
 ### [Assignment 3 - Theoretical](/blog/iitk-resources/eso-207/Solutions/Assignment3/Invariantly_Yours.pdf) | [Assignment 3 - Code](/blog/iitk-resources/eso-207/Solutions/Assignment3/sol.cpp)
 ### [Assignment 4 - Theoretical](/blog/iitk-resources/eso-207/Solutions/Assignment4/Invariantly_Yours.pdf) | [Assignment 4 - Code(1)](/blog/iitk-resources/eso-207/Solutions/Assignment4/Ass4_top_down.cpp) | [Assignment 4 - Code(2)](/blog/iitk-resources/eso-207/Solutions/Assignment4/Ass4_bottom_up.cpp)
 \
