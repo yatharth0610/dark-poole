@@ -1,0 +1,214 @@
+\documentclass{article}
+\usepackage[a4paper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{lipsum}
+\usepackage{changepage}
+\usepackage{lineno}
+\usepackage{enumerate}
+
+\usepackage{amsmath, amssymb, amsfonts, amsthm, fouriernc, mathtools}
+\usepackage{microtype}
+
+\usepackage{algorithm}
+\usepackage[linesnumbered, ruled, vlined, algo2e]{algorithm2e} 
+
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\SetCommentSty{mycommfont}
+
+\usepackage[svgnames]{xcolor}
+\definecolor{lightgrey}{rgb}{0.5,0.5,0.5}
+\definecolor{grey}{rgb}{0.25,0.25,0.25}
+\newcommand{\blackb}{\color{Black} \usefont{OT1}{lmss}{m}{n}}
+\newcommand{\lightgreyb}{\color{lightgrey} \usefont{OT1}{lmss}{m}{n}}
+\setlength{\parindent}{0pt}
+
+\usepackage{titlesec}
+\usepackage{sectsty}
+\sectionfont{\color{lightgrey}}
+\subsectionfont{\color{lightgrey}}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{\thesection\arabic{subsection}}
+
+\usepackage{chngcntr}
+\counterwithin*{equation}{section}
+
+\newcommand{\mysection}{
+\titleformat{\section} [runin] {\usefont{OT1}{lmss}{b}{n}\color{lightgrey}}
+{\thesection} {3pt} {} }
+
+\renewcommand{\theequation}{\thesection\arabic{equation}}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@Aboxed}{\boxed{#1#2}}{\colorbox{black!15}{$#1#2$}}{}{}
+\patchcmd{\@boxed}{\boxed{#1#2}}{\colorbox{black!15}{$#1#2$}}{}{}
+\makeatother
+
+\title{\vspace{80mm}\lightgreyb ESO207A: Data Structures and Algorithms \\
+\lightgreyb Assignment $1$ Solution}
+\author{Yatharth Goswami}
+\date{\today}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{lemma}{Lemma}[conjecture]
+
+\newenvironment{myenv}{\begin{adjustwidth}{1cm}{}}{\end{adjustwidth}}
+
+\begin{document}
+\clearpage\maketitle
+\thispagestyle{empty}
+\newpage
+\section{Problem 1}{
+    The problem demanded us to write pseudo code for counting the number of inversions present in an array using Divide and Conquer.\\
+    \colorbox[gray]{0.95} {  
+    \begin{algorithm2e}[H]
+    \caption{Count the number of inversions in an Array $A$}
+    \SetKwInput{KwInput}{Input}                % Set the Input
+    \SetKwInput{KwOutput}{Output}              % set the Output
+    \DontPrintSemicolon
+      
+      \KwInput{Array $A$ containing n integers}
+      \KwOutput{Number of inversions present in $A$}
+    
+    % Set Function Names
+      \SetKwFunction{FMerge}{Merge}
+      \SetKwFunction{FCountInversions}{CountInversions}
+      \SetKwFunction{FMergeSort}{MergeSort}
+     
+    % Write Function with word ``Function''
+    \vspace{5pt}
+      \SetKwProg{Fn}{Function}{:}{}
+      \Fn{\FCountInversions{Array $A$, Length $n$}}{
+            $sorted$ = \emph{Empty array of size n}\\
+            ans = MergeSort($A$, $sorted$, $0$, $n-1$)\\
+            \KwRet ans\\
+      }
+    
+      \SetKwProg{Fn}{Function}{:}{}
+      \Fn{\FMergeSort{Array $A$, Temp\_Array $sorted$, start $l$, end $r$}}{
+            count = 0\\
+            \If{r $>$ l} 
+                {
+                    mid = $l + (r-l)/2$\\
+                    count = count + MergeSort($A, sorted, l, mid$)\\
+                    count = count + MergeSort($A, sorted, mid+1, r$)\\
+                    count = count + Merge($A, sorted, l, mid, r$)
+                }
+            \KwRet count\;
+      }
+    
+      \SetKwProg{Fn}{Function}{:}{}
+      \Fn{\FMerge{Array $A$, Temp\_Array $sorted$, start $l$, partition\_at $mid$, end $r$}}{
+            $count = 0,$
+            $i = l,$
+            $j = mid+1,$
+            $k = l$\;
+            \While{i \le mid AND j \le r}{
+            \eIf{A[i] <= A[j]}{
+            $sorted[k] = A[i]$\;
+            $k = k + 1$\;
+            $i = i + 1$\;
+            }{
+            $sorted[k] = A[j]$\;
+            $k = k + 1$\;
+            $j = j + 1$\;
+            $count = count + mid + 1 - i$
+            }
+            }
+            \While{$i $ \leq $ mid$} 
+            {
+                $sorted[k] = A[i]$\\
+                $k = k + 1$\\
+                $i = i + 1$
+            }
+            \While {$j $ \leq $ r$} 
+            {
+                $sorted[k] = A[j]$\\
+                $k = k+1$\\
+                $j = j+1$
+            }
+            \For {$i = l$ to $r$} 
+            {
+                $A[i] = sorted[i]$ 
+            }
+            \KwRet count
+      }
+    \end{algorithm2e}
+    }
+}
+
+\section{Problem 2}{
+    The problem demanded us to prove the correctness of the algorithm used above using "Loop Invariance Technique".
+    \begin {proof}
+        We will prove the correctness of the above algorithm by first proving the correctness of the \textbf{Merge} function and then the correctness of \textbf{MergeSort} function. \newline \newline
+        \textbf{Part (a) : Proving Correctness of Merge function} \newline \\
+        We will prove this using the technique of loop invariants. The Merge function is taking in a part of an array $A$ starting at position $l$, ending at position $r$ and also takes in a temporary array of same size as that of original array $A$. The part of array taken as input is already partitioned at index $mid$ into two sorted arrays $A[l, mid]$ and $A[mid+1, r]$, where   
+        \[ mid = l + (r-l)/2 \]
+        \[A[l, mid] -> \text {Slice of $A$ starting at $l$ and ending at $mid$}\]
+        \[A[mid + 1, r] -> \text {Slice of $A$ starting at $mid+1$ and ending at $r$}\]
+        The function returns the number of inversions present in the range $[l,r]$ given that the subarrays $A[l, mid]$ and $A[mid+1, r]$ are sorted. The function also merges these two sorted arrays and sorts the subarray $A[l, r]$ as a whole. \\
+        
+        For proving these two properties of the merge function we introduce the following loop invariants :
+        \begin{enumerate}[i]
+          \item Number of inversions in subarray $A[l, mid] = 0$
+          \item Number of inversions in subarray $A[mid + 1, j] = 0$
+          \item Variable $count$ contains the number of inversions present in the subarray $A[l, j-1]$
+          \item $sorted[l, k-1]$ is a permutation of $A[l, i-1] \cup A[mid+1, j-1]$
+          \item $sorted[l,k-1]$ contains the smallest $(k-l)$ elements of the array $A[l, mid+1]$ and $A[mid+1, r]$ combined
+          \item $l \leq i \leq (mid+1) \leq j \leq r+1,$ $ k = i + j - mid - 1$  
+          \item $sorted[l, k-1]$ is sorted
+        \end{enumerate}
+        The first three invariants are needed to prove that merge returns the number of inversions present in the array $A[l, r]$ and the last four are the same invariants as told in the class to prove that merge sorts the subarray $A[l, r]$ as a whole.\\
+        
+        Now we will prove all of the invariants by proving the invariants at three different points in the program at line 14 (before the start of the loop), and then by assuming that if they hold at line 16, and $k \leq r$ they will also hold at line 24 when the first loop ends. While loops that start at lines 25 and 29 are essentially same as the first while loop at line 15, so we will only focus on proving the invariance for the first while loop. \\
+        \newpage
+        
+        \textbf{Initialization:} At the initialization step $i = l\ k = l\ and\ j = mid+1$ so invariants number $2, 4, 5,\ \text {and}\ 7$ are trivially true and invariant $1$ is true since the array $A[l, mid]$ is already sorted and therefore contains no inversions and hence invariant $3$ is also true. And plugging in these initial values of $i,j,k $ leads to invariant number $6$\\
+        
+        \textbf{Maintenance:} Now, we will assume that the invariants hold for a particular iteration $k$ and we will show that it holds for $k+1$ as well. So, we will each of them one by one.
+        \begin{enumerate}[i] 
+            \item Since, we are not changing any part of original array $A$ in the loop from 15 to 24 so this invariant is true for all iterations since the subarray $A[l, mid]$ remains sorted.
+            \item Similar to the first invariant since changing any part of original array $A$ in the loop from 15 to 24 so $A[mid+1, j]$ being a subarray of $A[mid+1, r]$ is also sorted and hence the number of inversions will remain zero.
+            \item Now, for proving this invariant we will have two cases based on which of the \textbf{if-else} part of the loop gets executed. 
+            \begin{enumerate}[a]
+            \item \textbf{Case (a):} \emph{IF} part of the loop gets executed, then we can see that j doesn't get incremented inside the loop, hence $count$ still holds the number of inversions in the array $A[l, j-1]$.
+            \item \textbf{Case (b):} \emph{ELSE} part of the loop gets executed, from the above two invariants we can say that any invariant that exists in the array $A[l, j-1]$ only exists between elements of $A[l, mid]$ and $A[mid+1, j-1]$ and not inside any of them since they have zero inversions inside them as proved above. Now if $A[i] > A[j]$ then we can say that since $A[i, mid]$ is sorted so $A[p] \geq A[i] > A[j]$ where $p \in [i, mid]$ and hence each of them will add to the inversion count, so $count = count + mid + 1 - i$ and hence the count now contains the number of inversions in $A[l, j]$ and since $j$ gets incremented here, so the invariance holds for next loop as well.
+            \end{enumerate}
+            \item Now, if the invariant is true at the start and we are adding either element from $A[l, i-1]$ or $A[mid+1, j-1]$ then the next element will be either $A[i]$ or $A[j]$ and the loop invariant will hold. 
+            \item If the array already holds the $k-l$ smallest elements among $A[l, mid+1]$ and $A[mid+1, r]$ and since $A[i]$ and $A[j]$ are the smallest elements left in the arrays $A[i, mid]$ and $A[j, r]$ and adding the smaller one among them implies that the array $sorted$ now contains the smallest $k+1-l$ elements, which will be true for next iteration as well.
+            \item Since, either $i$ or $j$ increases by 1 and $k$ also increases by 1. This condition holds invariably.
+            \item By $5$ we can say, that $sorted[l, k-1] \leq A[i],A[j]$, hence adding the smaller one among them will not disturb the sorted array and now $sorted[l, k]$ will become sorted which makes the invariant true for next iteration.
+         \end{enumerate}
+         \textbf{Termination :} On termination of the loop we would have either $i > mid\ OR j > r$. 
+         \begin{enumerate}[i]
+            \item {\textbf{Case (a):}} If $i > mid$ therefore $i = mid+1$, by invariant number $6$ we have $k = j$ therefore by $3$ we have the number of inversions present in array $A[l, j-1]$. Now since by $5$ it also happens that we have seen the $k-l$ smallest elements and the elements remaining now are all sorted since $j \geq mid+1$, so by looking at these elements we will add no more inversions. And now we can insert these remaining elements in our $sorted$ array and the array will remain sorted afterwards as well.\\
+            
+            So, after completing the while loop on line 29 we would have inserted an additional $r+1-j$ elements and adding $k-l$ to this will lead to adding $r+1-l$ elements into $sorted$ array and it is sorted as discussed above. Also, since we are adding no more inversions after that point we can similarly say that we have counted all of the inversions present in $A[l, r]$ before entering loop at line 29. Now, we are putting these sorted elements in original array $A[l, r]$ in loop in line 33.
+            \item {\textbf{Case (b):}} If $j > r$ therefore $j = r+1$, now for the $sorted$ being the sorted version of array $A[l, r]$ after the loop 25 ends we will use just the similar argument as stated above. While for $count$ containing the number of inversions in the array $A[l, r]$ we can say that since $j = r+1$ therefore it holds the number of inversions in $A[l, r]$ by invariant $3$, which is the total array. 
+        \end{enumerate}
+        Hence proved, that merge sorts the original array and returns the count of inversions present in it and it's correctness.\newline \\
+        \textbf{Part (b): Proving Correctness of MergeSort function} \newline \\
+        To prove the correctness of the algorithm, we need to prove correctness of the MergeSort function as well, which can be easily proved using induction.\\
+        \textbf{Recursive Property: }Sorts the Elements in $A[l,r]$ and returns the number of inversions present in $A[l, r]$.\\
+        \textbf{Base Case: } $n = 1$ or $A$ contains a single element (which is trivially sorted and contains zero inversions.)\\
+        \textbf{Inductive Hypothesis: }Assume that MergeSort correctly sorts and counts the number of inversions for n=1,2,3...,k elements.\\
+        \textbf{Inductive Step: }Merge sort correctly sorts and finds inversion count for k+1 elements.
+        \begin{proof}
+        We prove this by establishing an observation. \\
+        \textbf{Observation 1:} Counting the number of inversions in an array is same as dividing the array into two parts and counting number of inversions present inside these two arrays and between these two arrays.
+        \begin{proof}
+        We can easily prove this observation by noticing that any element of an array can have a smaller element on the right side of it which can be either on the right side of the partition or the left side of the partition. If it is on the right side of the partition it adds to the number of inversions between the two partitioned arrays, otherwise it adds to inversions present inside the two arrays. Also, notice that the second type of inversion $i.e.$ between the two arrays can also be counted by sorting both the arrays and then counting for it, since the element which is in the second array will still remain to the right of the element of the first array.
+        \end{proof}
+        Now first recursive call will find the number of inversions in array of size $(k+1)/2 \le k$ which implies that the MergeSort correctly finds the number of inversions in this array and correctly sorts this as well. \\
+        Second recursive call also works on array of size  $(k+1)/2 \le k$ which implies that the MergeSort correctly finds the number of inversions in this array and correctly sorts this as well.\\
+        In the third step since we have proved the correctness of Merge function above so, we will get the number of inversions present between the two arrays. \\
+        Hence by \textbf{Observation 1} we proved that this function returns the number of inversions present in the array of size k+1 and sorts this array as well.
+        \end{proof}
+        Thereby, we proved the correctness of both the functions used in the program and Hence the correctness of the program as whole. 
+    \end{proof} 
+}
+\end{document}

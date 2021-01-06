@@ -6,7 +6,7 @@ subtitle: Resources related to CS 201 (Discrete Mathematics) can be found here
 
 This is the webpage for the course CS201 that I did during Spring 2020. The course was taught by Prof. Manindra Agarwal.   
 
-The course was divided into four parts i.e. Set Theory, Counting of sets, Graph Theory and Abstract Algebra. The four assignments provided below cover these topics repectively. 
+The course was divided into four parts i.e. Set Theory, Counting of sets, Graph Theory and Abstract Algebra. The four assignments provided below cover these topics respectively. 
 
 # Assignment Solutions
 ### [Assignment 1](/blog/iitk-resources/cs-201/CS201_Assignment1.pdf) - Set Theory
@@ -24,3 +24,4 @@ The course was divided into four parts i.e. Set Theory, Counting of sets, Graph 
 ### [End Sem](/blog/iitk-resources/cs-201/CS201A_Endsem.pdf) - Graph Theory and Abstract Algebra  
 \
 _Remark_ : Please keep in mind that I am purely posting these solutions out of interest and do not take any responsibility of the correctness of the solutions posted. Please feel free to reach out to me through [mail](ygoswami@iitk.ac.in) in case you find an error.
+

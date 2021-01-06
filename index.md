@@ -15,10 +15,9 @@ If you are looking for my academic homepage, that is [here](https://yatharth0610
 
 ## Academics
 * [Notes](/blog/notes)
-* [IITK Resources](/blog/iitk-resources), collection of resources for various CSE courses at IITK.
+* [IITK Resources](/blog/iitk-resources), collection of resources for various courses done by me at IITK.
+
+\
+_Important Remark_ : Please do not ask me to update the site with course assignments and exams for every year. This website is in **NO WAY**, an attempt to create a big repository rather it's just a means to house the coursework that I will be doing during my bachelor's at IITK. 
 
 ## Blog
-* [IITB Timetable in LaTeX](/timetable/)
-* [(Quick) intro to LaTeX](/latex)
-* [Setting up math keyboard shortcuts (Android)](/shortcuts)
-* [Setting up your website](/website)

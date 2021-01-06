@@ -1,25 +1,12 @@
 ---
 layout: page
-title: About
+title: Academics
 ---
 
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+This page is an attempt to house my solutions and projects for the coursework that I will be doing at IITK. I initially planned this to just act as some means for me to look behind at the kind of work I did, but now that I think about it, I would be happy enough if anyone other than me also finds it resourceful. You are free to use the resources in any way that you like, keeping in my just one concern which I have pointed as an _Important Remark_ below.  
 
-There are currently two themes built on Poole:
+* [Notes](/blog/notes)
+* [IITK Resources](/blog/iitk-resources), collection of resources for various courses done by me at IITK.
 
-- [Hyde](https://hyde.getpoole.com)
-- [Lanyon](https://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-- Built for [Jekyll](https://jekyllrb.com)
-- Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-- Coded with [Atom](https://atom.io), an amazing open source code editor
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+\
+_Important Remark_ : Please do not ask me to update the site with course assignments and exams for every year. This website is in **NO WAY**, an attempt to create a big repository rather it's just a means to house the coursework that I will be doing during my bachelor's at IITK.
