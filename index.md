@@ -7,16 +7,15 @@ Hi there, you have reached my personal blogsite.
 
 This is where I will put my stuff related to acads and projects, mostly related to courses that I take at IITK. 
 
-Links below and also on nav-bar. 
+The links for the same can be found below and as well as on nav-bar. 
 
 If you are looking for my academic homepage, that is [here](https://yatharth0610.github.io)
 
 # Links
 
 ## Academics
-* [Notes](/notes)
-* [Tutorials](/tuts), pages I made while TA'ing for courses
-* [IITK Resources](/iitk-resources), collection of lectures for various courses
+* [Notes](/blog/notes)
+* [IITK Resources](/blog/iitk-resources), collection of resources for various CSE courses at IITK.
 
 ## Blog
 * [IITB Timetable in LaTeX](/timetable/)

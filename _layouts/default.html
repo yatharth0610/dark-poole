@@ -22,10 +22,12 @@
 
       <footer class="footer">
         <small>
-          &copy;
-          <time datetime="{{ site.time | date_to_xmlschema }}"
-            >{{ site.time | date: '%Y' }}</time
-          >. All rights reserved.
+          <center>
+            Made by {{ site.author.name }} <br>
+            &copy;<time datetime="{{ site.time | date_to_xmlschema }}"
+              >{{ site.time | date: '%Y' }}</time
+            >. All rights reserved.
+          </center>
         </small>
       </footer>
     </div>
