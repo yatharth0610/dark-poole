@@ -15,7 +15,7 @@ The links for the same can be found below and as well as on nav-bar although the
 
 [This](/blog/cool_stuff) is a list of some stuff that I find really interesting. 
 
-If you are looking for my academic homepage (which is more professional and hence, boring), you can find it [here](https://yatharth0610.github.io)
+If you are looking for my academic homepage (which is more professional), you can find it [here](https://yatharth0610.github.io)
 
 ## Academics
 * [Notes](/blog/notes)
@@ -25,3 +25,7 @@ If you are looking for my academic homepage (which is more professional and henc
 _Important Remark_ : Please do not ask me to update the site with course assignments and exams for every year. This website is in **NO WAY**, an attempt to create a big repository rather it's just a means to house the coursework that I will be doing during my bachelor's at IITK. 
 
 ## Blog
+
+This is where I will be writing some tutorials as well as experiences that I think are worth sharing. I will also try to write some personal blogs here, which you might (not) find interesting. 
+
+Head over to [this](/blog/archive) link to see the posts.
