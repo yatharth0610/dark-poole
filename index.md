@@ -5,13 +5,17 @@ subtitle: My Personal Website
 ---
 Hi there, you have reached my personal blogsite.
 
-This is where I will put my stuff related to acads and projects, mostly related to courses that I take at IITK. 
+This is where I will put my stuff related to acads, my projects, stuff that I find cool and finally a blog where I plan to write some tutorial as well as some personal experiences I would like to share. 
 
-The links for the same can be found below and as well as on nav-bar. 
-
-If you are looking for my academic homepage, that is [here](https://yatharth0610.github.io)
+The links for the same can be found below and as well as on nav-bar although the ones in nav-bar are a little bit more extensive and contain more content. 
 
 # Links
+
+[This](/blog/courses) is a list of courses that I have taken and am doing.
+
+[This](/blog/cool_stuff) is a list of some stuff that I find really interesting. 
+
+If you are looking for my academic homepage (which is more professional and hence, boring), you can find it [here](https://yatharth0610.github.io)
 
 ## Academics
 * [Notes](/blog/notes)
