@@ -26,6 +26,4 @@ _Important Remark_ : Please do not ask me to update the site with course assignm
 
 ## Blog
 
-This is where I will be writing some tutorials as well as experiences that I think are worth sharing. I will also try to write some personal blogs here, which you might (not) find interesting. 
-
 Head over to [this](/blog/archive) link to see the posts.
