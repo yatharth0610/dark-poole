@@ -13,7 +13,7 @@ Coming back to my walk, every step was full of glee. Butterscotch walked past me
 
 Life was something different back then. The people I loved, I started to love them more..and the people I hated (super rare species) they seemed not so bad. 
 
-I know somewhere in the back of your head would be lying the question, when he will do the assignment. Yes I know..gtg now. Bye!!"
+Damn! That assignment. Yes I know..gtg now. Bye!!"
 
 Hope this would have brought some nostalgia to you guys as well.That's all for this post. Cheers!!
 
