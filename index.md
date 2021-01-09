@@ -9,7 +9,7 @@ This is where I will put my stuff related to acads, my projects, stuff that I fi
 
 The links for the same can be found below and as well as on nav-bar although the ones in nav-bar are a little bit more extensive and contain more content. 
 
-If you hae something to tell me and wish to do so anonymously, you may drop a message [here](https://docs.google.com/forms/d/e/1FAIpQLSf6Ga8lyGlxkSKbyv8kmXSSx13lL_JeHsMYpNR1p3mrczpYkA/viewform?usp=sf_link). 
+If you have something to tell me and wish to do so anonymously, you may drop a message [here](https://docs.google.com/forms/d/e/1FAIpQLSf6Ga8lyGlxkSKbyv8kmXSSx13lL_JeHsMYpNR1p3mrczpYkA/viewform?usp=sf_link). 
 
 # Links
 
