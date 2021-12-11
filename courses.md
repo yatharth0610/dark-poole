@@ -25,7 +25,7 @@ subtitle: IIT Kanpur
 
 ### Department of Mathematics
 
-* MTH-511 - Statistical Simulation and Data Analysis
+* [MTH-511 - Statistical Simulation and Data Analysis](https://dvats.github.io/teaching/MTH511.html)
 * [MTH-101 - Real Analysis and Multivariate Calculus](https://sites.google.com/view/exploring-infinity-within/teaching/mth101a)
 * MTH-102 - Linear Algebra and Ordinary Differential Equations
 
