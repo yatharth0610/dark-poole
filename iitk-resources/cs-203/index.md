@@ -13,7 +13,8 @@ The course had 3 assignments, 3 quizzes and an end semester exam. I am posting h
 
 # Assignments Solutions
 ### [Assignment 1](/blog/iitk-resources/cs-203/191178_Assignment_1.pdf) | [Assignment 2](/blog/iitk-resources/cs-203/191178_Assignment_2.pdf) | [Assignment 3](/blog/iitk-resources/cs-203/191178_Assignment_3.pdf) 
-\ 
+
+\
 _Fun-Fact_ : I received the remark from my tutor for one of the best and ingenuine solution for problem 1 of Assignment 3. 
 
 \

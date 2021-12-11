@@ -22,7 +22,6 @@ You can find all the assignments and our attempted solutions [here](https://gith
 
 [End Sem Exam](/blog/iitk-resources/cs641/Endsem/CS641-EndSem-Questions.pdf) | [Our Solutions](/blog/iitk-resources/cs641/Endsem/PolkaDots.pdf)
 
-
 \
 _Fun-Fact_ : Ended up being amongst the top teams to secure an A* (for exceptional performance) in the course. 
 
