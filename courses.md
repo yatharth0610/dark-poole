@@ -14,6 +14,10 @@ subtitle: IIT Kanpur
 * CS-220 - Computer Organisation
 * CS-253 - Software Development
 * CS-711 - Game Theory and Mechanism Design
+* CS-330 - Operating Systems
+* CS-345 - Advanced Algorithms 
+* CS-340 - Theory of Computation
+* CS-771 - Intro to Machine Learning
 
 ### Department of Electrical Engineering
 
@@ -21,6 +25,7 @@ subtitle: IIT Kanpur
 
 ### Department of Mathematics
 
+* MTH-511 - Statistical Simulation and Data Analysis
 * [MTH-101 - Real Analysis and Multivariate Calculus](https://sites.google.com/view/exploring-infinity-within/teaching/mth101a)
 * MTH-102 - Linear Algebra and Ordinary Differential Equations
 
@@ -51,3 +56,6 @@ subtitle: IIT Kanpur
 ### Department of Mechanical Engineering
 * TA202 - Manufacturing Processes - 2
 
+### Department of Humanities and Social Sciences
+* PHI 140 - Introduction to Indian Philosophy
+* SOC 171 - Introduction to Indian Society
