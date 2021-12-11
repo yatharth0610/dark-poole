@@ -16,11 +16,11 @@ You can find all the assignments and our attempted solutions [here](https://gith
 
 # MidSem 
 
-[Mid Sem - Problems and Solutions](/blog/iitk-resources/cs641/Midsem/PolkaDots.pdf)
+[Mid Sem - Problems and Solutions](/blog/iitk-resources/cs-641/Midsem/PolkaDots.pdf)
 
 # EndSem
 
-[End Sem Exam](/blog/iitk-resources/cs641/Endsem/CS641-EndSem-Questions.pdf) | [Our Solutions](/blog/iitk-resources/cs641/Endsem/PolkaDots.pdf)
+[End Sem Exam](/blog/iitk-resources/cs-641/Endsem/CS641-EndSem-Questions.pdf) | [Our Solutions](/blog/iitk-resources/cs-641/Endsem/PolkaDots.pdf)
 
 \
 _Fun-Fact_ : Ended up being amongst the top teams to secure an A* (for exceptional performance) in the course. 
